@@ -1,5 +1,10 @@
+import Variables.Variables
+
 fun main(){
-    println("Whats Your Name?");
-    val name = readln()
-    println("Hello $name")
+
+    Variables().item = "not a carrot"
+    Variables().items = "not carrots"
+    println(Variables().items)
+    println(Variables().item)
+    println(Variables().text)
 }
