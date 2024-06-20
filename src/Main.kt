@@ -9,7 +9,7 @@ fun main(){
 
     try {
         println("enter a number")
-        val input = readln()//used for simple inputs that are expected to exist
+        val input = readln()//used for simple inputs that are expected to exist: can be any type since non is specified
         print("you entered number $input")
     }catch (e: Exception){
         println(e)
@@ -18,11 +18,10 @@ fun main(){
     try{
         val digit = Scanner(System.`in`)
         println("Enter a number : ")
-        val input = digit.nextInt()
+        val input = digit.nextInt() //only type specified is allowed else it will throw an error
         println(input)
 
     }catch(e: Exception){
         println("$e")
     }
-
 }
