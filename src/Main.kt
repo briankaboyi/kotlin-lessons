@@ -1,30 +1,28 @@
 import DataTypes.Datatypes
 import Variables.Variables
+import java.util.*
 
 fun main(){
-//expressions consist of variables, operators that evaluate to a single value
-    val total: Int = (1..500).random() + 200
-    val numberCheck = if (total> 500) "More than 500" else "Less than 500"
+    print("enter some text")
+    val stringInput = readLine()!!
+    println("you entered this text: $stringInput")
 
-    println("nummberCheck $numberCheck")
-    print("total $total")
-
-    // A statement is everything that makes up a complete unit of execution
-    println("Hello mate")
-
-    val quickMaths = 2 + 2 + 1
-    println(quickMaths)
-
-
-    //A block is a group of statements (zero or more) that is enclosed in curly braces { }
-    var number = 0
-
-    for (i in 1..25){
-        number += 1
-        print("$number ")
+    try {
+        println("enter a number")
+        val input = readln()//used for simple inputs that are expected to exist
+        print("you entered number $input")
+    }catch (e: Exception){
+        println(e)
     }
-    // for single line comments
-    /*
-    * for block/multiline comments
-    * */
+
+    try{
+        val digit = Scanner(System.`in`)
+        println("Enter a number : ")
+        val input = digit.nextInt()
+        println(input)
+
+    }catch(e: Exception){
+        println("$e")
+    }
+
 }
