@@ -3,30 +3,59 @@ import Variables.Variables
 import java.util.*
 
 fun main(){
- val number = (-10..10).random()
-    println("random number is $number")
-
-    var result = if(number > 0){
-         "number is positive"
-    } else if(number < 0){
-        "number is negative"
-    } else {
-        "number is zero"
-    }
-    println(result)
-
-    val a = (1..12).random()
-    val b = (1..12).random()
-
-//    var largestNumber = if(a < b){
-//        println("a is smaller:a $a : b $b")
-//        b
-//    } else{
-//        println("b is smaller:a $a : b $b")
-//        a
-//    }
+//    print("Enter a number:")
+//    val number = readLine()!!.toDouble()
 //
-    var largestNumber = if(a < b) b  else a
+//    print("Enter another number:")
+//    val number2 = readLine()!!.toDouble()
+//
+//    print("Enter an operator + - * /: ")
+//    val operator = readLine()!!
+//
+//    val result: String= when(operator) {
+//        "+" -> "$number +  $number2 = ${number + number2}"
+//        "-" -> "$number -  $number2 = ${number - number2}"
+//        "*" -> "$number *  $number2 = ${number * number2}"
+//        "/" -> "$number /  $number2 = ${number / number2}"
+//        else -> "operator is not recognized"
+//    }
+//    println(result)
 
-    println("largestNumber: $largestNumber")
+//    val a: Int =(1..100).random()
+//    println(a)
+//    when(a){
+//        //checking within a range
+//        in 1..50 -> println("$a is in the range 1 to 50")
+//        in 51..100 -> println("$a is in the range 1 to 100")
+//    }
+
+
+    var number =4
+
+    var x = if(number ==1){
+       "hello"
+    }else if(number==2){
+         "goodbye"
+    }else if(number==3){
+         3
+    }else{
+        listOf(1,2,3,4,5)
+    }
+
+
+
+
+        when(x){
+
+        is Int -> {
+            when(x){
+                1 -> println("hello")
+                2 -> println("goodbye")
+                else -> println("not 1 or 2, number is: $number")
+            }
+
+        }
+        is String -> println("number is string :  $number")
+        else -> println("number is neither int or string: $x")
+    }
 }
