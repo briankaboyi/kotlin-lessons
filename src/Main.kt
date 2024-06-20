@@ -3,25 +3,30 @@ import Variables.Variables
 import java.util.*
 
 fun main(){
-    print("enter some text")
-    val stringInput = readLine()!!
-    println("you entered this text: $stringInput")
+ val number = (-10..10).random()
+    println("random number is $number")
 
-    try {
-        println("enter a number")
-        val input = readln()//used for simple inputs that are expected to exist: can be any type since non is specified
-        print("you entered number $input")
-    }catch (e: Exception){
-        println(e)
+    var result = if(number > 0){
+         "number is positive"
+    } else if(number < 0){
+        "number is negative"
+    } else {
+        "number is zero"
     }
+    println(result)
 
-    try{
-        val digit = Scanner(System.`in`)
-        println("Enter a number : ")
-        val input = digit.nextInt() //only type specified is allowed else it will throw an error
-        println(input)
+    val a = (1..12).random()
+    val b = (1..12).random()
 
-    }catch(e: Exception){
-        println("$e")
-    }
+//    var largestNumber = if(a < b){
+//        println("a is smaller:a $a : b $b")
+//        b
+//    } else{
+//        println("b is smaller:a $a : b $b")
+//        a
+//    }
+//
+    var largestNumber = if(a < b) b  else a
+
+    println("largestNumber: $largestNumber")
 }
