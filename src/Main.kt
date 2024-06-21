@@ -3,59 +3,29 @@ import Variables.Variables
 import java.util.*
 
 fun main(){
-//    print("Enter a number:")
-//    val number = readLine()!!.toDouble()
+// var number = 1
 //
-//    print("Enter another number:")
-//    val number2 = readLine()!!.toDouble()
+//    while (number<=5){
+//        println("line $number")
+//        number++
+//    };
 //
-//    print("Enter an operator + - * /: ")
-//    val operator = readLine()!!
-//
-//    val result: String= when(operator) {
-//        "+" -> "$number +  $number2 = ${number + number2}"
-//        "-" -> "$number -  $number2 = ${number - number2}"
-//        "*" -> "$number *  $number2 = ${number * number2}"
-//        "/" -> "$number /  $number2 = ${number / number2}"
-//        else -> "operator is not recognized"
-//    }
-//    println(result)
+//    do{
+//        println("do while $number")
+//        number--
+//    }while(number >=1)
 
-//    val a: Int =(1..100).random()
-//    println(a)
-//    when(a){
-//        //checking within a range
-//        in 1..50 -> println("$a is in the range 1 to 50")
-//        in 51..100 -> println("$a is in the range 1 to 100")
-//    }
+    var sum = 0
+    var userInput: String
 
+    println("instructions: \ntype in any whole number to add\ntype 0 to exit")
 
-    var number =4
+    do{
+        print("Enter a number:")
+        userInput = readLine()!!
+        sum+=userInput.toInt()
 
-    var x = if(number ==1){
-       "hello"
-    }else if(number==2){
-         "goodbye"
-    }else if(number==3){
-         3
-    }else{
-        listOf(1,2,3,4,5)
-    }
+    }while (userInput != "0")
 
-
-
-
-        when(x){
-
-        is Int -> {
-            when(x){
-                1 -> println("hello")
-                2 -> println("goodbye")
-                else -> println("not 1 or 2, number is: $number")
-            }
-
-        }
-        is String -> println("number is string :  $number")
-        else -> println("number is neither int or string: $x")
-    }
+    print("total = $sum")
 }
