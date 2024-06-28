@@ -2,39 +2,32 @@ import DataTypes.Datatypes
 import Variables.Variables
 import java.util.*
 
+private var coinFlips = 0
+private var headsWin = 0
+private var tailsWin = 0
 fun main(){
-for (i in 1 until 5){ //prints 1 -4
-    print(i)
-}
-    println("----------------\n")
+    println("How's the weather today?")
+    println("Flip the coin how many times?")
+val numberOfTimes =  readLine()!!.toInt()
+    for(i in 0 until numberOfTimes){
+        val random = (1..2).random()
+        println("random $i: $random")
+        ++coinFlips
+        if(random == 1){
+            headsWin++
+            print("heads $headsWin")
+        }else{
+            tailsWin++
+            print("tails $tailsWin")
 
-    for (i in 1 .. 5){ //prints 1 -5
-    print(i)
-}
-    println("\n----------------")
-
-    for (i in 5 downTo 1){
-        print(i)
-    }
-    println("\n----------------")
-    for (i in 500 downTo 1 step 20){
-        print(i)
-    }
-    println("\n----------------")
-
-    for (i in 1 until 500 step 20){
-        print(i)
-    }
-
-    val languages = listOf<String>("Ruby","Kotlin","Python","Java","Dart")
-    for (i in languages){
-        for(i in languages){
-            println(i)
         }
+        println("Coins flipped: $coinFlips")
     }
-
-    val text = "Whatever text you want"
-    for(i in text){
-        print("$i.")
-    }
+    println("""
+        Total flips = $coinFlips
+        ---
+        Heads won: $headsWin times
+        ---
+        Tails won: $tailsWin times
+    """.trimIndent())
 }
