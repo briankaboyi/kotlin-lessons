@@ -1,7 +1,7 @@
 
 fun main(){
-var coffeeMachine = CoffeeMachine(true,"Black")
-    coffeeMachine.coffee = "hondurus"
-
-    coffeeMachine.printMessge()
+val peter = Person()
+    peter.age=35
+    peter.actualAge = 21
+    println(peter.age)
 }
