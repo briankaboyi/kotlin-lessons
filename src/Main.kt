@@ -1,14 +1,17 @@
 
 fun main(){
-   doSomething()
-    println(add(3,2,3,message="a different message"))
+  add(1)
 }
+var b = 1
+fun add(a: Int): Int{
+     b = a
+    if(b<5){
+        println("still in recursion :value of b id $b")
+        add(a+1)
 
-fun doSomething(){
-    println("something done")
-}
+    }else{
+        println("recursion done: value of b : $b")
 
-private fun add(a:Int,b:Int,c:Int,message:String = "this is a message"):Int{
-    println(message)
-    return a+b+c
+    }
+    return b
 }
