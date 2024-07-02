@@ -1,18 +1,31 @@
-class Person {
-    var age: Int= 0
-        get(){
-            println("getter has been accessed")
-            return field
-        }
-        set(value){
-            field = when{
-                value < 18 -> 18
-                value in 18..30-> value
-                else ->  value -3
-            }
-            println("age has been set")
-        }
-    var actualAge: Int = 0
+open class Person(_height:Double,_name:String) {
+    val height = _height
+    val name = _name
+    var applePrice: String = "$34"
 
+//
+    init{
+        println("My height is $height")
+        println("My name is $name")
+    }
+    open fun walk(){
+        println("Walking is good for your health")
+    }
+}
+class Teacher(_height: Double, _name: String,_topic : String): Person(_height,_name){
+
+    val topic = _topic
+    fun teach(){
+        println("$name is teaching $topic")
+    }
+    override fun walk(){
+    println("teacher $name has been walking")
+    }
+}
+class Business(_height: Double, _name: String): Person(_height, _name){
+    fun doBusiness(){
+        println("$name is doing business")
+        println("THe price of an apple is $applePrice")
+    }
 
 }
