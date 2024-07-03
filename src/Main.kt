@@ -1,10 +1,6 @@
 
 fun main(){
-val outer = OuterClass()
-    val inner = OuterClass.NestedClass()
-    inner.printMessage("from nested class")
-
-    val innerclass = outer.InnerClass()
-    innerclass.printMessage("innerclass innerclass")
+val coder = Coder("brian")
+    coder.printMessage("this is a message")
 }
 //internal visibility modifier only used in modules
