@@ -1,9 +1,8 @@
 
 fun main(){
-val james = Teacher(7.6,"James","programming")
-    james.teach()
-    val john = Business(6.4,"John")
-    john.doBusiness()
-    john.walk()
-    james.walk()
+val apple = Fruit("apple")
+    apple.sayHello()
+    val newApple = SubFruit("subapple")
+newApple.sayHello()
 }
+//internal visibility modifier only used in modules
