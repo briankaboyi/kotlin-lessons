@@ -1,26 +1,17 @@
+data class Cat(val name: String, val age: Int) {}
+
 fun main() {
+    val cats = listOf(
+        Cat("john",12 ),
+        Cat("james",14 ),
+        Cat("peter",11 ),
+        Cat("simon",15 ),
+    )
+    val oldersCat = cats.maxBy {it.age }
+    println("${oldersCat.name} is the oldest cat")
+    val helloWorld = { println("hello mate!") }
+    helloWorld()
 
-println(Numbers.APP_NAME)
-    Numbers.helloMate()
-    AnApple.randomNumber()
-    val apple = AnApple()
-    apple.fruit()
-}
-class AnApple{
-
-    companion object{
-        private var x = 0
-        private var y = 30
-        fun randomNumber(){
-
-            val random = (x..y).random()
-            println("random number is :$random")
-
-        }
-    }
-    fun fruit(){
-        x=50
-        y=100
-        randomNumber()
-    }
+    val sum = { a: Int, b: Int -> a + b }
+    println(sum(4, 5))
 }
