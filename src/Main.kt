@@ -1,4 +1,3 @@
-
 fun main() {
 //   //// LET
 //    val str = "String"
@@ -18,11 +17,18 @@ fun main() {
 //    }
 //    println(sentence)
 
-    val phrase: String? = null
-    phrase?.let {println("phrase is $phrase")} ?: run {
-        "this was printed because phrase is null"
-    }
+//    var phrase: String? = null
+//    phrase?.let {println("phrase is $phrase")} ?: run {
+//        "this was printed because phrase is null"
+//    }
+//
+//    println(phrase)
 
-    println(phrase)
+//    /////ALSO
+
+    val numbers = mutableListOf("one", "two", "three")
+    numbers.also { ("this is the numbers list $numbers") }.add("four")
+    println(numbers)
+
 }
 
