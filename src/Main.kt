@@ -1,17 +1,12 @@
-data class Cat(val name: String, val age: Int) {}
 
 fun main() {
-    val cats = listOf(
-        Cat("john",12 ),
-        Cat("james",14 ),
-        Cat("peter",11 ),
-        Cat("simon",15 ),
-    )
-    val oldersCat = cats.maxBy {it.age }
-    println("${oldersCat.name} is the oldest cat")
-    val helloWorld = { println("hello mate!") }
-    helloWorld()
+val str = "String"
+    val strLength = str.let {it.length} //could be easily done with str.length but just here for demostration of let
+    println("str length is $strLength")
+    val a = 10
+    var b = 4
 
-    val sum = { a: Int, b: Int -> a + b }
-    println(sum(4, 5))
+    val sum = (a+2).let { val i = it + 3; i }.let { it * 2 }
+    println(sum)
 }
+
