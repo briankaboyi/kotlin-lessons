@@ -1,19 +1,16 @@
-fun main(){
-    val ivan = Person(7.6,"IVAN")
-    ivan.apply {
-        name = "ivan2"
-        height = 4.3
-    }
-    println(ivan.name)
-    println(ivan.height)
+import kotlin.random.Random
 
-    val person2 = Person(7.3,"PPER")
-    with(person2) {
-        name = "uri"
-        height = 6.3
-        println(name)
-        println(height)
-        println(this.name)
-    }
+
+fun main() {
+
+//    val number = Random.nextInt(100)
+//    val evenOrNull = number.takeIf { it % 2 == 0 }
+//    val oddOrNull = number.takeUnless { it % 2 == 0 }
+//
+//    println("number $number")
+//    println("evenOrNull $evenOrNull oddOrNull $oddOrNull")
+
+
+
 }
 
