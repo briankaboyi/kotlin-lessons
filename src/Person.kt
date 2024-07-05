@@ -1,6 +1,6 @@
 open class Person(_height:Double,_name:String) {
-    val height = _height
-    val name = _name
+    var height = _height
+    var name = _name
     var applePrice: String = "$34"
 
 //

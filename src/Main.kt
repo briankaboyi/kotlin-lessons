@@ -1,34 +1,19 @@
-fun main() {
-//   //// LET
-//    val str = "String"
-//    val strLength = str.let {it.length} //could be easily done with str.length but just here for demostration of let
-//    println("str length is $strLength")
-//    val a = 10
-//    var b = 4
-//
-//    val sum = (a+2).let { val i = it + 3; i }.let { it * 2 }
-//    println(sum)
+fun main(){
+    val ivan = Person(7.6,"IVAN")
+    ivan.apply {
+        name = "ivan2"
+        height = 4.3
+    }
+    println(ivan.name)
+    println(ivan.height)
 
-//    ////RUN
-//    val sentence = run {
-//        val sentence1 = "this is returned inside the run method"
-//        println("this is executed inside the run method")
-//        sentence1
-//    }
-//    println(sentence)
-
-//    var phrase: String? = null
-//    phrase?.let {println("phrase is $phrase")} ?: run {
-//        "this was printed because phrase is null"
-//    }
-//
-//    println(phrase)
-
-//    /////ALSO
-
-    val numbers = mutableListOf("one", "two", "three")
-    numbers.also { ("this is the numbers list $numbers") }.add("four")
-    println(numbers)
-
+    val person2 = Person(7.3,"PPER")
+    with(person2) {
+        name = "uri"
+        height = 6.3
+        println(name)
+        println(height)
+        println(this.name)
+    }
 }
 

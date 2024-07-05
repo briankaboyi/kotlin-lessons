@@ -19,8 +19,4 @@ class Datatypes {
 //    Boolean 8 - bit: true or false
     var text: String = "this is a Kotlin tutorial"
 //    String
-
-
-
-
 }
