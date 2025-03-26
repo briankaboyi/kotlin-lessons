@@ -14,14 +14,41 @@ init {
 
 }
 }
-
 fun newExpressionBodyFunction(a:Int,b:Int) : Int = a + b
 fun timesTwo(num :Int):Int{
     return num *2
 }
 fun introduce(name:String = "Last Name Doe",city: String = "An Unknown CIty"): String = "Hi im $name from $city"
 fun timeTwoAsAnExpression(num :Int) : Int= num *2
+fun joinOptions(options: Collection<String>) =
+    options.joinToString(prefix = "[", postfix = "]")
+const val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
 
+fun getPattern(): String = """\d{2}\ $month \d{4}"""
+
+//null safety and safe calls
+fun sendMessageToClient(
+    client: Client?, message: String?, mailer: Mailer
+) {
+
+    client?.let{
+        message?.let{
+            val personalInfo = client.personalInfo
+            personalInfo?.let{
+                val email = personalInfo.email;
+                email?.let{
+                    mailer.sendMessage(email, message);
+                }
+            }
+        }
+    }
+}
+
+class Client(val personalInfo: PersonalInfo?)
+class PersonalInfo(val email: String?)
+interface Mailer {
+    fun sendMessage(email: String, message: String)
+}
 
 fun main(){
  val newNullable = Nullable("brian",)
@@ -31,10 +58,6 @@ fun main(){
     println(introduce("brian"))
     println(introduce(city = "nairobi"))
     println("from times two as an expression body *** ${timeTwoAsAnExpression(num = 6)}")
-
-
-
-
-
-
+    println(joinOptions(listOf("a","B","C")))
+    println(getPattern())
 }
