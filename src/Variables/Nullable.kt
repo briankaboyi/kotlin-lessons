@@ -49,8 +49,17 @@ class PersonalInfo(val email: String?)
 interface Mailer {
     fun sendMessage(email: String, message: String)
 }
-
+class SimpleMailer : Mailer {
+    override fun sendMessage(email: String, message: String) {
+        println("Sending message to $email: $message")
+    }
+}
 fun main(){
+    var newemail ="myemail@h.l"
+    var newPersonalInfo = PersonalInfo(email = newemail)
+    var newClient = Client(personalInfo = newPersonalInfo)
+    val mailer: Mailer = SimpleMailer()
+
  val newNullable = Nullable("brian",)
     println(newExpressionBodyFunction(b=4,a=7))
     println(timesTwo(num=4))
@@ -60,4 +69,5 @@ fun main(){
     println("from times two as an expression body *** ${timeTwoAsAnExpression(num = 6)}")
     println(joinOptions(listOf("a","B","C")))
     println(getPattern())
+    println(sendMessageToClient(client = newClient,"this is message", mailer = mailer))
 }
