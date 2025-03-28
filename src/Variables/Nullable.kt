@@ -43,9 +43,10 @@ fun sendMessageToClient(
         }
     }
 }
-//value? value can be null
-// nullValue ?: nonNullValue if its null return a non null value
-//value?.let{} only execute if value is not null
+//value?. value can be null  //SAFECALL OPERATOR
+// nullValue ?: nonNullValue if its null return a non null value //ELVIS OPERATOR
+//value?.let{} only execute if value is not null   //SAFE CALL WITH LET OPERATOR
+//!! //NOT NULL ASERTION
 
 
 class Client(val personalInfo: PersonalInfo?)
@@ -65,6 +66,13 @@ fun getAge(age:Int?):Int{
     return age?:18
 }
 
+class Person(val name: String)
+fun printUpperCaseName(person : Person? ) {
+
+   person?.let {
+       println("printUpperCaseName: ${person.name.uppercase()}")
+   }
+}
 
 fun main(){
 //    var newemail ="myemail@h.l"
@@ -87,5 +95,7 @@ fun main(){
     println("stringLenght: ${stringLength("null")}")
     println("getAge: ${getAge(null)}")
     println("getAge: ${getAge(34)}")
+   printUpperCaseName(Person("taiwan"))
+printUpperCaseName(null)
 
 }
