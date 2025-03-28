@@ -71,7 +71,7 @@ class Person(val name: String)
 fun printUpperCaseName(person : Person? ) {
 
    person?.let {
-       println("printUpperCaseName: ${person.name.uppercase()}")
+       println("printUpperCaseName: ${it.name.uppercase()}")
    }
 }
 
@@ -81,7 +81,7 @@ fun sumList(myIntList : List<Int>?): Int{
 fun getFullName(firstName:String?,lastName:String?): String{
     firstName?.let {
         lastName?.let {
-            return "$firstName $lastName"
+            return "$firstName $it"
         }
     }
     return "Name Incomplete"
@@ -114,7 +114,7 @@ fun main(){
 
     val intList : List<Int> = listOf(1,2,3)
     println("sumList >>${sumList(intList)}")
-    println("sumList >>${sumList(null)}") //throws a nullpointerexceptioni
+//    println("sumList >>${sumList(null)}") //throws a nullpointerexceptioni
 
     println("getFullName >>${getFullName("john","doe")}")
     println("getFullName >>${getFullName("john",null)}")
