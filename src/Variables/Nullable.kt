@@ -43,6 +43,7 @@ fun sendMessageToClient(
         }
     }
 }
+
 //value?. value can be null  //SAFECALL OPERATOR
 // nullValue ?: nonNullValue if its null return a non null value //ELVIS OPERATOR
 //value?.let{} only execute if value is not null   //SAFE CALL WITH LET OPERATOR
@@ -77,7 +78,14 @@ fun printUpperCaseName(person : Person? ) {
 fun sumList(myIntList : List<Int>?): Int{
     return myIntList!!.sum()
 }
-
+fun getFullName(firstName:String?,lastName:String?): String{
+    firstName?.let {
+        lastName?.let {
+            return "$firstName $lastName"
+        }
+    }
+    return "Name Incomplete"
+}
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -107,6 +115,11 @@ fun main(){
     val intList : List<Int> = listOf(1,2,3)
     println("sumList >>${sumList(intList)}")
     println("sumList >>${sumList(null)}") //throws a nullpointerexceptioni
+
+    println("getFullName >>${getFullName("john","doe")}")
+    println("getFullName >>${getFullName("john",null)}")
+    println("getFullName >>${getFullName(null,"doe")}")
+
 
 
 }
