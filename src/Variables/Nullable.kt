@@ -76,7 +76,10 @@ fun printUpperCaseName(person : Person? ) {
 }
 
 fun sumList(myIntList : List<Int>?): Int{
-    return myIntList!!.sum()
+    myIntList?.let {
+        return it.sum()
+    }
+   return 0
 }
 fun getFullName(firstName:String?,lastName:String?): String{
     return if(firstName != null && lastName != null) "$firstName $lastName" else "Name Incomplete"
@@ -109,7 +112,7 @@ fun main(){
 
     val intList : List<Int> = listOf(1,2,3)
     println("sumList >>${sumList(intList)}")
-//    println("sumList >>${sumList(null)}") //throws a nullpointerexceptioni
+    println("sumList >>${sumList(null)}") //throws a nullpointerexceptioni
 
     println("getFullName >>${getFullName("john","doe")}")
     println("getFullName >>${getFullName("john",null)}")
