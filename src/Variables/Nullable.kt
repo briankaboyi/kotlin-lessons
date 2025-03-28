@@ -47,7 +47,7 @@ fun sendMessageToClient(
 //value?. value can be null  //SAFECALL OPERATOR
 // nullValue ?: nonNullValue if its null return a non null value //ELVIS OPERATOR
 //value?.let{} only execute if value is not null   //SAFE CALL WITH LET OPERATOR
-//!! //NOT NULL ASERTION
+//!! //NOT NULL ASERTION    forces value to be treated as nun-null
 
 
 class Client(val personalInfo: PersonalInfo?)
@@ -79,12 +79,7 @@ fun sumList(myIntList : List<Int>?): Int{
     return myIntList!!.sum()
 }
 fun getFullName(firstName:String?,lastName:String?): String{
-    firstName?.let {
-        lastName?.let {
-            return "$firstName $it"
-        }
-    }
-    return "Name Incomplete"
+    return if(firstName != null && lastName != null) "$firstName $lastName" else "Name Incomplete"
 }
 fun main(){
 //    var newemail ="myemail@h.l"
