@@ -74,6 +74,10 @@ fun printUpperCaseName(person : Person? ) {
    }
 }
 
+fun sumList(myIntList : List<Int>?): Int{
+    return myIntList!!.sum()
+}
+
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -93,9 +97,16 @@ fun main(){
 
     println("stringLenght: ${stringLength(null)}")
     println("stringLenght: ${stringLength("null")}")
+
     println("getAge: ${getAge(null)}")
     println("getAge: ${getAge(34)}")
-   printUpperCaseName(Person("taiwan"))
-printUpperCaseName(null)
+
+    printUpperCaseName(Person("taiwan"))
+    printUpperCaseName(null)
+
+    val intList : List<Int> = listOf(1,2,3)
+    println("sumList >>${sumList(intList)}")
+    println("sumList >>${sumList(null)}") //throws a nullpointerexceptioni
+
 
 }
