@@ -46,9 +46,7 @@ fun sendMessageToClient(
 //value? value can be null
 // nullValue ?: nonNullValue if its null return a non null value
 //value?.let{} only execute if value is not null
-fun stringLength(myString :String?):Int{
-    return myString?.length?:0
-}
+
 
 class Client(val personalInfo: PersonalInfo?)
 class PersonalInfo(val email: String?)
@@ -60,6 +58,14 @@ class SimpleMailer : Mailer {
         println("Sending message to $email: $message")
     }
 }
+fun stringLength(myString :String?):Int{
+    return myString?.length?:0
+}
+fun getAge(age:Int?):Int{
+    return age?:18
+}
+
+
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -76,6 +82,10 @@ fun main(){
 //    println(joinOptions(listOf("a","B","C")))
 //    println(getPattern())
 //    println(sendMessageToClient(client = newClient,"this is message", mailer = mailer))
+
     println("stringLenght: ${stringLength(null)}")
     println("stringLenght: ${stringLength("null")}")
+    println("getAge: ${getAge(null)}")
+    println("getAge: ${getAge(34)}")
+
 }
