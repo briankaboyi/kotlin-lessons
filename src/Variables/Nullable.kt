@@ -43,6 +43,12 @@ fun sendMessageToClient(
         }
     }
 }
+//value? value can be null
+// nullValue ?: nonNullValue if its null return a non null value
+//value?.let{} only execute if value is not null
+fun stringLength(myString :String?):Int{
+    return myString?.length?:0
+}
 
 class Client(val personalInfo: PersonalInfo?)
 class PersonalInfo(val email: String?)
@@ -55,19 +61,21 @@ class SimpleMailer : Mailer {
     }
 }
 fun main(){
-    var newemail ="myemail@h.l"
-    var newPersonalInfo = PersonalInfo(email = newemail)
-    var newClient = Client(personalInfo = newPersonalInfo)
-    val mailer: Mailer = SimpleMailer()
-
- val newNullable = Nullable("brian",)
-    println(newExpressionBodyFunction(b=4,a=7))
-    println(timesTwo(num=4))
-    println(introduce())
-    println(introduce("brian"))
-    println(introduce(city = "nairobi"))
-    println("from times two as an expression body *** ${timeTwoAsAnExpression(num = 6)}")
-    println(joinOptions(listOf("a","B","C")))
-    println(getPattern())
-    println(sendMessageToClient(client = newClient,"this is message", mailer = mailer))
+//    var newemail ="myemail@h.l"
+//    var newPersonalInfo = PersonalInfo(email = newemail)
+//    var newClient = Client(personalInfo = newPersonalInfo)
+//    val mailer: Mailer = SimpleMailer()
+//
+// val newNullable = Nullable("brian",)
+//    println(newExpressionBodyFunction(b=4,a=7))
+//    println(timesTwo(num=4))
+//    println(introduce())
+//    println(introduce("brian"))
+//    println(introduce(city = "nairobi"))
+//    println("from times two as an expression body *** ${timeTwoAsAnExpression(num = 6)}")
+//    println(joinOptions(listOf("a","B","C")))
+//    println(getPattern())
+//    println(sendMessageToClient(client = newClient,"this is message", mailer = mailer))
+    println("stringLenght: ${stringLength(null)}")
+    println("stringLenght: ${stringLength("null")}")
 }
