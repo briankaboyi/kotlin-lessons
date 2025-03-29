@@ -130,10 +130,12 @@ fun main(){
 //    println("getFullName >>${getFullName("john",null)}")
 //    println("getFullName >>${getFullName(null,"doe")}")
 
-    val numArray = Array(5) {it+1}
+    val numArray = IntArray(5) {it + 1}
+    val numsArray = intArrayOf(1,23,2,45,5)
     println(numArray.contentToString())
+    println(numsArray.contentToString())
 
-    println(getArraySum(numArray))
+    println(getArraySum(numsArray.toTypedArray()))
 
 
 
