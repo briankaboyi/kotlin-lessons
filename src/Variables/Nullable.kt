@@ -84,6 +84,18 @@ fun sumList(myIntList : List<Int>?): Int{
 fun getFullName(firstName:String?,lastName:String?): String{
     return if(firstName != null && lastName != null) "$firstName $lastName" else "Name Incomplete"
 }
+
+fun getArraySum( myAray : Array<Int>): Int{
+    val numArrayLength =  myAray.size
+    var total = 0
+    myAray.forEach {
+        if(myAray.indexOf(it)<=numArrayLength-1){
+            total += it
+        }
+    }
+    return  total
+//    return myAray.sum()
+}
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -101,22 +113,27 @@ fun main(){
 //    println(getPattern())
 //    println(sendMessageToClient(client = newClient,"this is message", mailer = mailer))
 
-    println("stringLenght: ${stringLength(null)}")
-    println("stringLenght: ${stringLength("null")}")
+//    println("stringLenght: ${stringLength(null)}")
+//    println("stringLenght: ${stringLength("null")}")
+//
+//    println("getAge: ${getAge(null)}")
+//    println("getAge: ${getAge(34)}")
+//
+//    printUpperCaseName(Person("taiwan"))
+//    printUpperCaseName(null)
+//
+//    val intList : List<Int> = listOf(1,2,3)
+//    println("sumList >>${sumList(intList)}")
+//    println("sumList >>${sumList(null)}") //throws a nullpointerexceptioni
+//
+//    println("getFullName >>${getFullName("john","doe")}")
+//    println("getFullName >>${getFullName("john",null)}")
+//    println("getFullName >>${getFullName(null,"doe")}")
 
-    println("getAge: ${getAge(null)}")
-    println("getAge: ${getAge(34)}")
+    val numArray = Array(5) {it+1}
+    println(numArray.contentToString())
 
-    printUpperCaseName(Person("taiwan"))
-    printUpperCaseName(null)
-
-    val intList : List<Int> = listOf(1,2,3)
-    println("sumList >>${sumList(intList)}")
-    println("sumList >>${sumList(null)}") //throws a nullpointerexceptioni
-
-    println("getFullName >>${getFullName("john","doe")}")
-    println("getFullName >>${getFullName("john",null)}")
-    println("getFullName >>${getFullName(null,"doe")}")
+    println(getArraySum(numArray))
 
 
 
