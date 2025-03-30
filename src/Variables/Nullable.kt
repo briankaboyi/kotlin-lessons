@@ -151,6 +151,10 @@ fun checkEven(collection:List<Int>): Boolean  {
 fun addToList(collection: List<Int>,myInt:Int ):List<Int>{
     return collection.plus(myInt)
 }
+fun addToMutableList( myList: MutableList<Int>, myInt:Int): Boolean {
+
+    return myList.add(myInt)
+}
 
 fun main(){
 //    var newemail ="myemail@h.l"
@@ -202,7 +206,10 @@ fun main(){
     println(sum(5,4))
     println(checkEven(numsList))
     println(findTheLargestValud(numsArray.toTypedArray()))
-    println(addToList(numsList,6))
+
+    val list = mutableListOf(3,4,7,8)
+    addToMutableList(list,6)
+    println(list)
 
 
 
