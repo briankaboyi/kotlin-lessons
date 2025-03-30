@@ -148,7 +148,9 @@ val sum:(Int,Int)->Int = {a,b->a+b}
 fun checkEven(collection:List<Int>): Boolean  {
    return collection.any { it % 2 ==0 }
 }
-
+fun addToList(collection: List<Int>,myInt:Int ):List<Int>{
+    return collection.plus(myInt)
+}
 
 fun main(){
 //    var newemail ="myemail@h.l"
@@ -200,6 +202,7 @@ fun main(){
     println(sum(5,4))
     println(checkEven(numsList))
     println(findTheLargestValud(numsArray.toTypedArray()))
+    println(addToList(numsList,6))
 
 
 
