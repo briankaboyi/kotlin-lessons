@@ -96,6 +96,11 @@ fun getArraySum( myAray : Array<Int>): Int{
     return  total
 //    return myAray.sum()
 }
+
+fun reverseArray(myAray: Array<Int>):Array<Int>{
+    return myAray.reversedArray()
+}
+
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -136,6 +141,7 @@ fun main(){
     println(numsArray.contentToString())
 
     println(getArraySum(numsArray.toTypedArray()))
+    println(reverseArray(numsArray.toTypedArray()).contentToString())
 
 
 
