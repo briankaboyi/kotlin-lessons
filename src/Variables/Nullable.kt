@@ -101,6 +101,22 @@ fun reverseArray(myAray: Array<Int>):Array<Int>{
     return myAray.reversedArray()
 }
 
+fun findMissingNumber(myIntList: List<Int>):Int{
+    var myValue = 1
+    var missingInt = 0
+    for(i in myIntList){
+        println("this is i:$i and myvalue : $myValue")
+        if(i!=myValue){
+            missingInt = myValue
+            println("i:$i is not equal to myvalue : $myValue")
+            break
+        }
+        myValue++
+    }
+    return missingInt
+
+}
+
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -137,11 +153,13 @@ fun main(){
 
     val numArray = IntArray(5) {it + 1}
     val numsArray = intArrayOf(1,23,2,45,5)
+    val numsList = listOf(1, 2,3, 4, 5,6,8,9)
     println(numArray.contentToString())
     println(numsArray.contentToString())
 
     println(getArraySum(numsArray.toTypedArray()))
     println(reverseArray(numsArray.toTypedArray()).contentToString())
+    println(findMissingNumber(numsList))
 
 
 
