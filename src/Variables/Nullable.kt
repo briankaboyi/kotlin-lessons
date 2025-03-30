@@ -116,6 +116,13 @@ fun findMissingNumber(myIntList: List<Int>):Int{
     return missingInt
 
 }
+fun rotatingList(myList: List<Any>, myIndex :Int):List<Any>{
+    val listOne = myList.subList(myList.size - myIndex,myList.size)
+    val listTwo = myList.subList(0,myList.size - myIndex)
+
+    return listOne.plus(listTwo)
+
+}
 
 fun main(){
 //    var newemail ="myemail@h.l"
@@ -160,6 +167,7 @@ fun main(){
     println(getArraySum(numsArray.toTypedArray()))
     println(reverseArray(numsArray.toTypedArray()).contentToString())
     println(findMissingNumber(numsList))
+    println(rotatingList(numsList,4))
 
 
 
