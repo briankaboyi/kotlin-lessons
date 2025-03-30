@@ -129,6 +129,15 @@ fun mergeSortedArrays(myArray1: Array<Int>,myArray2: Array<Int>):Array<Int>{
     return myFinalArra
 }
 
+fun findTheLargestValud(myAray: Array<Int>):Int{
+    var myInt = 0
+    for(i in myAray){
+        if(i>myInt){
+            myInt = i
+        }
+    }
+    return myInt
+}
 val sum:(Int,Int)->Int = {a,b->a+b}
 /**
 * (Int,Int) ->Int is the type of sum
@@ -139,6 +148,8 @@ val sum:(Int,Int)->Int = {a,b->a+b}
 fun checkEven(collection:List<Int>): Boolean  {
    return collection.any { it % 2 ==0 }
 }
+
+
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -188,6 +199,7 @@ fun main(){
 
     println(sum(5,4))
     println(checkEven(numsList))
+    println(findTheLargestValud(numsArray.toTypedArray()))
 
 
 
