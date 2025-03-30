@@ -129,6 +129,16 @@ fun mergeSortedArrays(myArray1: Array<Int>,myArray2: Array<Int>):Array<Int>{
     return myFinalArra
 }
 
+val sum:(Int,Int)->Int = {a,b->a+b}
+/**
+* (Int,Int) ->Int is the type of sum
+* a,b  are parameters
+* a+b is the return value
+ */
+
+fun checkEven(collection:List<Int>): Boolean  {
+   return collection.any { it % 2 ==0 }
+}
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -165,7 +175,7 @@ fun main(){
 
     val numArray = IntArray(5) {it + 1}
     val numsArray = intArrayOf(1,23,2,45,5)
-    val numsList = listOf(1, 2,3, 4, 5,6,8,9)
+    val numsList = listOf(1,3,  5,9)
     println(numArray.contentToString())
     println(numsArray.contentToString())
 
@@ -174,6 +184,10 @@ fun main(){
     println(findMissingNumber(numsList))
     println(rotatingList(numsList,4))
     println(mergeSortedArrays(numArray.toTypedArray(),numsArray.toTypedArray()).contentToString())
+
+
+    println(sum(5,4))
+    println(checkEven(numsList))
 
 
 
