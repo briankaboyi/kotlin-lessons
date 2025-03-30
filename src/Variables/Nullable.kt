@@ -124,6 +124,11 @@ fun rotatingList(myList: List<Any>, myIndex :Int):List<Any>{
 
 }
 
+fun mergeSortedArrays(myArray1: Array<Int>,myArray2: Array<Int>):Array<Int>{
+    val myFinalArra = arrayOf(*myArray1 , *myArray2)
+    return myFinalArra
+}
+
 fun main(){
 //    var newemail ="myemail@h.l"
 //    var newPersonalInfo = PersonalInfo(email = newemail)
@@ -168,6 +173,7 @@ fun main(){
     println(reverseArray(numsArray.toTypedArray()).contentToString())
     println(findMissingNumber(numsList))
     println(rotatingList(numsList,4))
+    println(mergeSortedArrays(numArray.toTypedArray(),numsArray.toTypedArray()).contentToString())
 
 
 
