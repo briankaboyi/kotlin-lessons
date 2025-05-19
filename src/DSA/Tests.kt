@@ -7,7 +7,8 @@ fun main() {
      * 3. for loop to print each number in the list
      */
 
-    val numbers = listOf(1,2,3,4,5,6,7,8,9,10)
+    val numbers = arrayOf(1,2,3,4,5,6,7,8,9,10)
+    sumOfEvenNumbers(numbers)
     println(numbers)
     var evenNumbers =numbers.filter{it% 2 ==0}
     println(evenNumbers)
@@ -15,4 +16,17 @@ fun main() {
     for(num in numbers){
         println("$num from numbers")
     }
+
+}
+
+/** *A function that takes an array of integers, filters it and returns the sum of all even numbers
+ *
+ */
+
+fun sumOfEvenNumbers(numbers: Array<Int>): Int {
+
+    val filteredNumbers = numbers.filter{it%2==0}
+    println("${filteredNumbers} result of numbers after filter")
+    return filteredNumbers.sum()
+
 }
