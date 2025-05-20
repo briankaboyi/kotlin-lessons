@@ -17,6 +17,9 @@ fun main() {
         println("$num from numbers")
     }
 
+//***********************************************
+    maxOfTwo(10,20)
+    println(maxOfTwo(10,20).toString() + " is the max of two numbers")
 }
 
 /** *A function that takes an array of integers, filters it and returns the sum of all even numbers
@@ -29,4 +32,13 @@ fun sumOfEvenNumbers(numbers: Array<Int>): Int {
     println("${filteredNumbers} result of numbers after filter")
     return filteredNumbers.sum()
 
+}
+
+fun maxOfTwo(a:Int,b:Int):Int{
+    if(a>b){
+        return a
+    }
+    else{
+        return b
+    }
 }
