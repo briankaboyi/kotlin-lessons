@@ -18,10 +18,13 @@ public class Tests {
         // Test the LinkedList class
         System.out.println("printed list " + list);
         System.out.println("printed reversedList " + revesedList);
+        System.out.println("the max of two numbers is " + maxOfTwo(5, 10));
+        System.out.println("the array contains num " + containsInt(new int[]{1, 2, 3, 4, 5}, 0));
 
     }
 
-    /** * a function that takes a linked list and returns a reversed linked list with manual iteration
+    /**
+     * a function that takes a linked list and returns a reversed linked list with manual iteration
      *
      * @param list
      * @return
@@ -41,4 +44,33 @@ public class Tests {
         }
         return reversedList;
     }
+
+    /**
+     * a function that takes two numbers and returns the max of the two
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    static int maxOfTwo(int a, int b) {
+        return Math.max(a, b);
+    }
+
+
+    /**
+     * a function that takes an array and a number and returns true if the number is in the array
+     *
+     * @param arr
+     * @param num
+     * @return
+     */
+    static Boolean containsInt(int[] arr, int num) {
+        for (int i : arr) {
+            if (i == num) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
