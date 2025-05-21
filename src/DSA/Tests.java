@@ -20,6 +20,7 @@ public class Tests {
         System.out.println("printed reversedList " + revesedList);
         System.out.println("the max of two numbers is " + maxOfTwo(5, 10));
         System.out.println("the array contains num " + containsInt(new int[]{1, 2, 3, 4, 5}, 0));
+        System.out.println("the factorial of 5 is " + factorial(5));
 
     }
 
@@ -71,6 +72,17 @@ public class Tests {
             }
         }
         return false;
+    }
+
+    static int factorial(int n) {
+
+        int currentNum = n;
+
+        for (int i = n - 1; i >= 1; i--) {
+            currentNum *= i;
+
+        }
+        return currentNum;
     }
 
 }
