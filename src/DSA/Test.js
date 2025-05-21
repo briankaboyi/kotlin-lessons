@@ -24,6 +24,7 @@ function reversedArray(array) {
 const reversedNumbers = reversedArray(numbersList)
 console.log(reversedNumbers);
 console.log(Math.max( 3, 4, 5));
+
 const findMax = (a,b) => Math.max(a,b);
 
 console.log(findMax(3, 9));
