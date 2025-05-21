@@ -20,6 +20,9 @@ fun main() {
 //***********************************************
     maxOfTwo(10,20)
     println(maxOfTwo(10,20).toString() + " is the max of two numbers")
+
+    println("printToN function called ${printToN(10)}")
+    mulitplicationTable(8)
 }
 
 /** *A function that takes an array of integers, filters it and returns the sum of all even numbers
@@ -40,5 +43,24 @@ fun maxOfTwo(a:Int,b:Int):Int{
     }
     else{
         return b
+    }
+}
+
+/**
+ * A function that takes an integer n and prints all numbers from 1 to n
+ */
+
+fun printToN(n:Int){
+    for (i in 1..n){
+        println(i)
+    }
+}
+
+/**
+ * A function that takes an integer n and prints the multiplication table of n
+ */
+fun mulitplicationTable(n:Int){
+    for (i in 1..10){
+        println("$n * $i = ${i*n}")
     }
 }
