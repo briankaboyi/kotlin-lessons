@@ -22,6 +22,9 @@ public class Tests {
         System.out.println("the array contains num " + containsInt(new int[]{1, 2, 3, 4, 5}, 0));
         System.out.println("the factorial of 5 is " + factorial(5));
 
+        int[] myArray = {1, 2, 3, 4, 5};
+       System.out.println("the max of the array is " + maxInt(myArray));
+
     }
 
     /**
@@ -85,4 +88,13 @@ public class Tests {
         return currentNum;
     }
 
+    static int maxInt(int[] myArray){
+        int max = myArray[0];
+        for(var i: myArray){
+            if( i > max){
+                max = i;
+            }
+        }
+        return max;
+    }
 }
