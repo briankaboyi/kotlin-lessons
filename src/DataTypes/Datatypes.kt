@@ -19,4 +19,22 @@ class Datatypes {
 //    Boolean 8 - bit: true or false
     var text: String = "this is a Kotlin tutorial"
 //    String
+
+    val arrayOfNumbers = arrayOf(1,2,3,4,5)
+//    an array is a collection of items of the same data type
+
+}
+fun main (){
+    println(Datatypes().arrayOfNumbers.contentToString())
+    val arrayItems = ArrayItems(Datatypes().arrayOfNumbers.get(0))
+    println("arrayitems age >>> ${arrayItems.age}")
+}
+
+class ArrayItems(val age:Int)
+
+data class CustomProperties(val name: String, val age: Int) {
+    var customProperties = arrayOf(name, age)
+    fun printCustomProperties() {
+        println(customProperties.contentToString())
+    }
 }
