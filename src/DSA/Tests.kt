@@ -25,6 +25,7 @@ fun main() {
 //    mulitplicationTable(8)
 //    println("the sum >>${recursiveSum(5)}")
     println("${evenInListOfIntegers(listOf(1, 2, 3, 9, 10))} is the number of even numbers in the list")
+    println("${evenNumbersInAnArray(arrayOf(1, 2, 3, 9, 10))} is the number of even numbers in the array")
 }
 
 /** *A function that takes an array of integers, filters it and returns the sum of all even numbers
@@ -82,6 +83,17 @@ fun evenInListOfIntegers(numbersList:List<Int>):Int {
         if(i % 2 == 0){
          evenNumbers.add(i)
 //
+        }
+    }
+    return evenNumbers.size
+}
+
+fun evenNumbersInAnArray(numbers:Array<Int>):Int{
+//    return numbers.filter{it%2==0}.size
+    val evenNumbers= mutableListOf<Int>()
+    for(i in numbers){
+        if(i%2==0){
+            evenNumbers.add(i)
         }
     }
     return evenNumbers.size
