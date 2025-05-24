@@ -1,6 +1,8 @@
 package DSA;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class Tests {
     public static void main(String[] args) {
@@ -16,14 +18,17 @@ public class Tests {
 
 
         // Test the LinkedList class
-        System.out.println("printed list " + list);
-        System.out.println("printed reversedList " + revesedList);
-        System.out.println("the max of two numbers is " + maxOfTwo(5, 10));
-        System.out.println("the array contains num " + containsInt(new int[]{1, 2, 3, 4, 5}, 0));
-        System.out.println("the factorial of 5 is " + factorial(5));
+//        System.out.println("printed list " + list);
+//        System.out.println("printed reversedList " + revesedList);
+//        System.out.println("the max of two numbers is " + maxOfTwo(5, 10));
+//        System.out.println("the array contains num " + containsInt(new int[]{1, 2, 3, 4, 5}, 0));
+//        System.out.println("the factorial of 5 is " + factorial(5));
+//
+//        int[] myArray = {1, 2, 3, 4, 5};
+//       System.out.println("the max of the array is " + maxInt(myArray));
 
-        int[] myArray = {1, 2, 3, 4, 5};
-       System.out.println("the max of the array is " + maxInt(myArray));
+        String revered = new Tests().reverseString( "myString");
+        System.out.println(revered);
 
     }
 
@@ -97,4 +102,17 @@ public class Tests {
         }
         return max;
     }
+    String reverseString(String myString){
+//        return new StringBuilder(myString).reverse().toString();
+        int length = myString.length()-1;
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for(int i = length;i>=0; i--){
+            stringBuilder.append(myString.charAt(i));
+        }
+
+        System.out.println(stringBuilder);
+        return stringBuilder.toString();
+    }
+
 }
